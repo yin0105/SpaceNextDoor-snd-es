@@ -1,0 +1,11 @@
+
+node_modules/
+
+*.lock
+package-lock.json
+
+data.json
+
+*.swp
+
+debug-data.json

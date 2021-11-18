@@ -1,0 +1,120 @@
+{
+    "mappings": {
+        "properties": {
+            "name": {
+                "type": "text"
+            },
+            "property_type": {
+                "type": "keyword"
+            },
+            "images": {
+                "type": "text"
+            },
+            "address": {
+                "properties": {
+                    "country": {
+                        "type": "keyword"
+                    },
+                    "state": {
+                        "type": "keyword"
+                    },
+                    "city": {
+                        "type": "keyword"
+                    },
+                    "district": {
+                        "type": "keyword"
+                    },
+                    "street": {
+                        "type": "text"
+                    },
+                    "postal_code": {
+                        "type": "keyword"
+                    },
+                    "geo_location": {
+                        "type": "geo_point"
+                    }
+                }
+            },
+            "spaces": {
+                "type": "nested",
+                "properties": {
+                    "name": {
+                        "type": "text"
+                    },
+                    "size": {
+                        "type": "integer"
+                    },
+                    "height": {
+                        "type": "float"
+                    },
+                    "width": {
+                        "type": "float"
+                    },
+                    "length": {
+                        "type": "float"
+                    },
+                    "size_unit": {
+                        "type": "keyword"
+                    },
+                    "dimensions_unit": {
+                        "type": "keyword"
+                    },
+                    "description": {
+                        "type": "text"
+                    },
+                    "status": {
+                        "type": "keyword"
+                    },
+                    "available_units": {
+                        "type": "integer"
+                    },
+                    "total_units": {
+                        "type": "integer"
+                    },
+                    "is_insured": {
+                        "type": "boolean"
+                    },
+                    "space_type": {
+                        "type": "keyword"
+                    },
+                    "min_rent_days": {
+                        "type": "integer"
+                    },
+                    "price": {
+                        "properties": {
+                            "per_day": {
+                                "type": "integer"
+                            },
+                            "per_week": {
+                                "type": "integer"
+                            },
+                            "per_month": {
+                                "type": "integer"
+                            },
+                            "per_year": {
+                                "type": "integer"
+                            },
+                            "currency": {
+                                "type": "keyword"
+                            },
+                            "type": {
+                                "type": "keyword"
+                            },
+                            "start_date": {
+                                "type": "date",
+                                "format": "epoch_millis"
+                            },
+                            "end_date": {
+                                "type": "date",
+                                "format": "epoch_millis"
+                            }
+                        }
+                    },
+                    "features": {
+                        "type": "keyword"
+                    }
+                }
+            }
+        }
+    }
+}
